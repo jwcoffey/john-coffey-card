@@ -1,9 +1,9 @@
-# John Coffey NFC Digital Business Card
+# John Coffey Digital Business Card — Exact Final
 
-Static mobile-first site for GitHub Pages.
+This package uses the exact approved visual as the page background and places working contact links over the buttons.
 
-Files:
-- index.html
-- style.css
-- gpdc-logo.png
-- john-coffey.vcf
+Buttons:
+- Call Office
+- Email
+- Office Location
+- Save Contact
