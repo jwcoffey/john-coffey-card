@@ -1,0 +1,161 @@
+:root{
+  --black:#050505;
+  --panel:#0b0b0b;
+  --white:#f7f7f7;
+  --gold:#d8a52f;
+  --gold2:#f0c95a;
+  --line:rgba(216,165,47,.9);
+  --muted:#d8d8d8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#000}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--white);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(216,165,47,.08),transparent 34%),
+    linear-gradient(180deg,#0b0b0b,#020202);
+  -webkit-font-smoothing:antialiased;
+}
+.shell{
+  min-height:100vh;
+  display:grid;
+  place-items:start center;
+  padding:max(14px,env(safe-area-inset-top)) 10px max(22px,env(safe-area-inset-bottom));
+}
+.card{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  width:min(100%,470px);
+  padding:22px 16px 18px;
+  border:1px solid rgba(216,165,47,.28);
+  border-radius:28px;
+  background:linear-gradient(180deg,rgba(15,15,15,.98),rgba(3,3,3,.99));
+  box-shadow:0 18px 55px rgba(0,0,0,.65);
+}
+.watermark{
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  display:grid;
+  place-items:start center;
+  overflow:hidden;
+  pointer-events:none;
+}
+.watermark img{
+  width:155%;
+  max-width:none;
+  margin-top:52px;
+  opacity:.055;
+  filter:grayscale(1) sepia(1) saturate(1.2) brightness(.65);
+}
+.identity{text-align:center}
+.logo{
+  display:block;
+  width:min(78%,320px);
+  max-height:132px;
+  object-fit:contain;
+  margin:0 auto 12px;
+}
+.agency{
+  margin:0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(.95rem,3.9vw,1.14rem);
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
+.circuit-row,.title-row,.star-divider,.office-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.circuit-row{margin:8px auto 10px}
+.circuit-row span,.title-row span,.star-divider span,.office-divider span{
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,var(--line));
+}
+.circuit-row span:last-child,.title-row span:last-child,.star-divider span:last-child,.office-divider span:last-child{
+  background:linear-gradient(90deg,var(--line),transparent);
+}
+.circuit-row p{
+  margin:0;
+  color:var(--gold2);
+  font-size:clamp(.86rem,3.8vw,1rem);
+  letter-spacing:.19em;
+  white-space:nowrap;
+}
+.star-divider{margin:10px auto 17px;width:92%}
+.star-divider b{color:var(--gold);font-size:1rem}
+h1{
+  margin:0;
+  font-size:clamp(2rem,10vw,3.05rem);
+  line-height:1;
+  letter-spacing:-.035em;
+  font-weight:800;
+}
+.title-row{margin:10px auto 8px;width:77%}
+.title-row p{
+  margin:0;
+  color:var(--gold2);
+  letter-spacing:.13em;
+  font-size:clamp(1rem,4.6vw,1.25rem);
+  white-space:nowrap;
+}
+.circuit-sub{
+  margin:0 0 16px;
+  font-size:clamp(.92rem,4vw,1.08rem);
+  letter-spacing:.04em;
+}
+.actions{display:grid;gap:10px}
+.action{
+  display:grid;
+  grid-template-columns:56px 1fr 20px;
+  align-items:center;
+  gap:12px;
+  min-height:90px;
+  padding:12px 14px;
+  border:1px solid rgba(216,165,47,.82);
+  border-radius:18px;
+  color:var(--white);
+  text-decoration:none;
+  background:linear-gradient(145deg,rgba(255,255,255,.018),rgba(255,255,255,0)),rgba(7,7,7,.9);
+  box-shadow:inset 0 0 18px rgba(216,165,47,.03);
+}
+.action:active{transform:scale(.992)}
+.action.save{
+  border-color:var(--gold2);
+  box-shadow:0 0 16px rgba(216,165,47,.38),inset 0 0 18px rgba(216,165,47,.06);
+}
+.icon{
+  width:54px;height:54px;border:2px solid var(--gold2);border-radius:50%;
+  display:grid;place-items:center;color:var(--gold2);font-size:1.65rem;
+}
+.copy{min-width:0;text-align:left}
+.copy strong{
+  display:block;font-size:1.05rem;letter-spacing:.03em;margin-bottom:5px
+}
+.copy small{
+  display:block;color:var(--gold2);font-size:.95rem;line-height:1.25;overflow-wrap:anywhere
+}
+.arrow{color:var(--gold2);font-size:2.4rem;line-height:1}
+.office{padding:17px 4px 2px;text-align:center}
+.office-divider{width:88%;margin:0 auto 11px}
+.office-divider b{color:var(--gold2);font-size:1.4rem}
+.office p{
+  margin:3px 0;
+  font-size:.97rem;
+  line-height:1.25;
+}
+@media(min-width:700px){
+  .shell{padding-top:30px}
+  .card{padding:28px 22px 22px}
+}
+@media(max-width:370px){
+  .agency{font-size:.82rem}
+  .circuit-row p{letter-spacing:.12em;font-size:.76rem}
+  .action{grid-template-columns:48px 1fr 16px;min-height:82px}
+  .icon{width:46px;height:46px;font-size:1.4rem}
+}

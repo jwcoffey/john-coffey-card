@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Coffey;John;;;
+FN:John Coffey
+ORG:Georgia Public Defender Council;Atlantic Judicial Circuit
+TITLE:Investigator
+TEL;TYPE=WORK,VOICE:+1-912-369-6338
+EMAIL;TYPE=INTERNET,WORK:jcoffey@gapublicdefender.com
+ADR;TYPE=WORK:;;201 S. Main Street\, Suite 2400;Hinesville;GA;31313;USA
+END:VCARD
